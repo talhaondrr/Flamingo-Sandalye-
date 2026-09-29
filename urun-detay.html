@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="Flamingo Sandalye ürün detayları, ahşap rengi ve kumaş seçimleri."/>
+  <title>Flamingo Sandalye — Ürün Detayı</title>
+  <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img alt="Flamingo Mobilya logosu" class="brand-logo" src="images/image-1.png"/>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Ana Sayfa</a>
+      <a aria-current="page" href="urunler.html">Modeller</a>
+      <a href="index.html#hakkimizda">Hakkımızda</a>
+      <a href="index.html#iletisim">İletişim</a>
+    </div>
+    <a class="nav-offer" href="index.html#iletisim">Teklif Al <span aria-hidden="true">→</span></a>
+  </div>
+</nav>
+
+<main class="product-detail-page" id="productDetailPage">
+  <div class="wrap">
+    <nav class="breadcrumb" aria-label="Sayfa yolu">
+      <a href="urunler.html">Modeller</a>
+      <span aria-hidden="true">/</span>
+      <span id="detailBreadcrumb">Model</span>
+    </nav>
+
+    <section class="product-detail-layout">
+      <div class="detail-gallery" aria-label="Ürün fotoğrafları">
+        <div class="detail-main-image-wrap">
+          <img id="detailMainImage" class="detail-main-image" src="images/scala.webp" alt="Ürün görseli"/>
+        </div>
+        <div class="detail-thumbs" id="detailThumbs"></div>
+      </div>
+
+      <div class="detail-panel">
+        <span class="detail-kicker">Flamingo Sandalye</span>
+        <h1 id="detailTitle">Scala</h1>
+        <p class="detail-description" id="detailDescription"></p>
+
+        <div class="detail-price-row">
+          <div>
+            <strong id="detailPrice">₺4.490</strong>
+            <span>Adet fiyatı</span>
+          </div>
+          <span class="detail-made-badge">Ahşap gövde</span>
+        </div>
+
+        <div class="detail-features" aria-label="Ürün özellikleri">
+          <div><b>Gövde</b><span>Ahşap</span></div>
+          <div><b>Ahşap rengi</b><span>Seçilebilir</span></div>
+          <div><b>Döşeme kumaşı</b><span>Seçilebilir</span></div>
+          <div><b>Ölçüler</b><span>Model bazında teyit edilir</span></div>
+        </div>
+
+        <div class="customizer">
+          <div class="customizer-head">
+            <div>
+              <span class="detail-step">01</span>
+              <h2>Ahşap rengini seçin</h2>
+            </div>
+            <span class="customizer-current" id="woodCurrent">Ceviz</span>
+          </div>
+          <div class="swatch-grid" id="woodOptions" role="radiogroup" aria-label="Ahşap rengi seçenekleri"></div>
+        </div>
+
+        <div class="customizer">
+          <div class="customizer-head">
+            <div>
+              <span class="detail-step">02</span>
+              <h2>Kumaşı seçin</h2>
+            </div>
+            <span class="customizer-current" id="fabricCurrent">Krem</span>
+          </div>
+          <div class="swatch-grid" id="fabricOptions" role="radiogroup" aria-label="Kumaş seçenekleri"></div>
+        </div>
+
+        <div class="catalog-note">
+          <strong>Kartela notu</strong>
+          <p>Buradaki renkler seçim sistemini göstermek için temsilidir. Gerçek ahşap ve kumaş kartelaları hazır olduğunda bu alanlara doğrudan eklenecektir.</p>
+        </div>
+
+        <div class="detail-order-row">
+          <label class="quantity-field" for="detailQuantity">
+            <span>Adet</span>
+            <input id="detailQuantity" min="1" step="1" type="number" value="1" inputmode="numeric"/>
+          </label>
+          <button class="detail-whatsapp-btn" id="detailWhatsApp" type="button">Seçimlerimle WhatsApp’tan Sor</button>
+        </div>
+
+        <div class="selection-summary" aria-live="polite">
+          <span>Seçiminiz</span>
+          <strong id="detailSelectionSummary">Scala · Ceviz · Krem · 1 adet</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-info-section">
+      <div>
+        <span class="detail-step">03</span>
+        <h2>Size özel üretim</h2>
+      </div>
+      <div class="detail-info-copy">
+        <p>Modeli seçtikten sonra ahşap tonu ve döşeme kumaşı birlikte belirlenir. Görsellerdeki renkler referans görünümüdür; üretim seçtiğiniz kombinasyona göre planlanır.</p>
+        <a class="detail-back-link" href="urunler.html">← Tüm modellere dön</a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Flamingo Sandalye. Tüm hakları saklıdır.</span>
+    <span><a href="urunler.html">Tüm modeller</a></span>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

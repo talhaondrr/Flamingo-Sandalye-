@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>İletişim — Flamingo Sandalye</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="nav">
+        <div class="wrap">
+            <a class="brand" href="index.html">
+                <img alt="Flamingo Mobilya logosu" class="brand-logo" src="images/image-1.png"/>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="urunler.html">Modeller</a>
+                <a href="index.html#hakkimizda">Hakkımızda</a>
+               <a href="index.html#iletisim">İletişim</a>
+            </div>
+            <a class="nav-offer" href="index.html#iletisim">Teklif Al <span aria-hidden="true">→</span></a>
+        </div>
+    </nav>
+
+    <section class="contact" id="iletisim">
+        <div class="wrap">
+            <div class="contact-info">
+                <h2>Bir model mi seçtiniz, yoksa özel tasarım mı istiyorsunuz?</h2>
+                <p>Model, ahşap rengi, kumaş, güncel fiyat ve proje teklifi için WhatsApp üzerinden bize yazın.</p>
+                <div class="contact-detail">
+                    <div><span>E-posta</span><span>merhaba@flamingosandalye.com</span></div>
+                    <div><span>Telefon</span><span><a class="contact-phone" href="tel:+905010951913">0501 095 19 13</a></span></div>
+                    <div><span>Showroom</span><span>Randevu ile ziyaret</span></div>
+                    <div><span>Çalışma saatleri</span><span>Pzt–Cmt, 09:00–18:00</span></div>
+                </div>
+            </div>
+            <form id="contactForm" data-whatsapp-form>
+                <div class="field">
+                    <label for="name">Ad Soyad</label>
+                    <input id="name" required="" type="text"/>
+                </div>
+                <div class="field">
+                    <label for="subject">Talep Konusu</label>
+                    <select id="subject" required="">
+                        <option value="" selected disabled>Bir konu seçiniz</option>
+                        <option value="Ürün Bilgisi">Ürün Bilgisi</option>
+                        <option value="Fiyat / Teklif">Fiyat / Teklif</option>
+                        <option value="Ahşap & Kumaş Seçimi">Ahşap &amp; Kumaş Seçimi</option>
+                        <option value="Özel Üretim">Özel Üretim</option>
+                        <option value="Sipariş Hakkında">Sipariş Hakkında</option>
+                        <option value="Diğer">Diğer</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="message">Mesajınız</label>
+                    <textarea id="message" required=""></textarea>
+                </div>
+                <button class="submit-btn" type="submit">WhatsApp’tan Gönder</button>
+                <p class="form-note" id="formNote"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <span>© 2026 Flamingo Sandalye. Tüm hakları saklıdır.</span>
+            <span><a href="#">Yukarı çık</a></span>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
