@@ -1,0 +1,49 @@
+/* Shared navigation: an ivory frame, walnut lettering and rose accents. */
+.nav{padding:12px 24px;background:rgba(245,242,235,.86);border-bottom:0;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+.nav .wrap{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;max-width:1320px;height:76px;margin:0 auto;padding:0 24px;border:1px solid #dfd7cc;border-radius:16px;background:rgba(255,253,249,.95);box-shadow:0 5px 24px #36251a07;}
+.nav .brand{gap:12px;justify-self:start;}
+.nav .brand-logo{width:48px;height:48px;object-fit:cover;box-shadow:0 0 0 4px #f5ede6;}
+.brand-wordmark{display:flex;flex-direction:column;gap:3px;color:#392a23;}
+.brand-wordmark strong{font-family:Georgia,serif;font-size:25px;line-height:1;font-weight:400;letter-spacing:-.8px;}
+.brand-wordmark>span{font-size:7px;font-weight:600;letter-spacing:2.2px;color:#9a7d70;white-space:nowrap;}
+.nav .nav-links{display:flex;justify-content:center;flex-wrap:nowrap;gap:4px;padding:0;min-width:0;font-size:.8rem;}
+.nav .nav-links a{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 15px;border-radius:9px;color:#6b5c51;white-space:nowrap;transition:color .2s,background .2s;}
+.nav .nav-links a::after{display:none;}
+.nav .nav-links a:hover{color:#8f4a5c;background:#f4ece9;}
+.nav .nav-links a[aria-current="page"]{color:#8f4a5c;background:#f2e7e6;font-weight:600;}
+.nav .nav-links .nav-catalog{color:#795e36;}
+.nav-catalog>span{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#e9dfcb;color:#795e36;font-size:14px;}
+.nav .nav-links a:focus-visible,.nav .brand:focus-visible{outline:2px solid #8f4a5c!important;outline-offset:3px;}
+.nav .nav-offer{min-height:42px;justify-content:center;padding:10px 18px;border-radius:9px;background:#382b24;box-shadow:none;font-size:.75rem;gap:14px;white-space:nowrap;}
+.nav .nav-offer:hover{background:#8f4a5c;}
+.nav .nav-instagram{width:42px;height:42px;border:1px solid #e6dad0;border-radius:12px;background:#fcf6f0;transition:background .2s,transform .2s;}
+.nav .nav-instagram:hover{background:#f2e7e6;transform:translateY(-1px);}
+.nav .nav-instagram i{font-size:22px;}
+@media(max-width:1100px){
+  .nav{padding:10px 16px;}
+  .nav .wrap{gap:14px;padding:0 18px;}
+  .nav .nav-links a{padding:10px 10px;font-size:.76rem;}
+  .brand-wordmark strong{font-size:23px;}
+  .brand-wordmark>span{font-size:6px;letter-spacing:1.7px;}
+}
+@media(max-width:880px){
+  .nav{padding:9px 12px;}
+  .nav .wrap{grid-template-columns:1fr auto;height:auto;padding:14px 16px 10px;gap:14px;border-radius:14px;}
+  .nav .brand{grid-row:1;grid-column:1;}
+  .nav .nav-offer,.nav .nav-instagram{grid-row:1;grid-column:2;justify-self:end;}
+  .nav .nav-links{grid-row:2;grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;width:100%;border-top:1px solid #eee5dc;padding-top:10px;overflow:visible;}
+  .nav .nav-links a{padding:10px 4px;font-size:.75rem;}
+}
+@media(max-width:480px){
+  .nav{padding:7px 8px;}
+  .nav .wrap{padding:12px 10px 8px;gap:12px;}
+  .nav .brand-logo{width:39px;height:39px;}
+  .nav .brand{gap:10px;}
+  .brand-wordmark strong{font-size:23px;}
+  .brand-wordmark>span{font-size:6px;letter-spacing:1.5px;}
+  .nav .nav-links{gap:1px;padding-top:8px;}
+  .nav .nav-links a{font-size:clamp(.6rem,2.65vw,.73rem);letter-spacing:-.02em;padding:10px 2px;gap:3px;}
+  .nav-catalog>span{width:15px;height:15px;font-size:12px;}
+  .nav .nav-offer{font-size:.68rem;padding:9px 12px;min-height:37px;gap:9px;}
+  .nav .nav-instagram{width:37px;height:37px;}
+}

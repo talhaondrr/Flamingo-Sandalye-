@@ -7,85 +7,128 @@ const cards = document.querySelectorAll('#productGrid .card');
 // WhatsApp numarasını ülke koduyla, boşluksuz biçimde buradan güncelleyin.
 const WHATSAPP_NUMBER = '905010951913';
 
+// Kaynak: Kullanıcının kataloğu. Kumaş metrajı iki adet içindir.
 const PRODUCT_GALLERIES = {
-  scala: { title: 'Scala', original: 'images/scala.webp', views: ['original', 'front', 'back', 'right', 'left', 'detail'] },
-  nova: { title: 'Nova', original: 'images/image-2.jpeg' },
-  'nova-plus': { title: 'Nova Plus', original: 'images/nova-plus.png' },
-  golf: { title: 'Golf', original: 'images/image-3.jpeg' },
-  arte: { title: 'Arte', original: 'images/image-4.jpeg' },
-  lead: { title: 'Lead', original: 'images/image-5.jpeg' },
-  tesla: { title: 'Tesla', original: 'images/image-6.jpeg' }
-};
-
-const PRODUCTS = {
-  scala: {
-    title: 'Scala',
-    price: '₺4.490',
-    description: 'Kavisli sırt yapısı ve yumuşak döşemesiyle modern yaşam alanlarına uyum sağlayan, zarif hatlı ahşap sandalye.',
-    defaultWood: 'Ceviz',
-    defaultFabric: 'Krem'
+  "angel": {
+    "title": "Angel",
+    "original": "images/catalog/angel.webp",
+    "views": [
+      "original"
+    ]
   },
-  nova: {
-    title: 'Nova',
-    price: '₺3.690',
-    description: 'Yumuşak formu ve sade çizgileriyle yemek alanları, kafe ve restoran projelerinde rahatlıkla kullanılabilen ahşap sandalye.',
-    defaultWood: 'Doğal',
-    defaultFabric: 'Krem'
+  "tesla": {
+    "title": "Tesla",
+    "original": "images/catalog/tesla.webp"
   },
-  'nova-plus': {
-    title: 'Nova Plus',
-    price: '₺4.890',
-    description: 'Daha belirgin sırt formu ve güçlü duruşuyla konforu öne çıkaran, ahşap rengi ve kumaşı özelleştirilebilir model.',
-    defaultWood: 'Koyu Ceviz',
-    defaultFabric: 'Gri'
+  "beny": {
+    "title": "Beny",
+    "original": "images/catalog/beny.webp",
+    "views": [
+      "original"
+    ]
   },
-  golf: {
-    title: 'Golf',
-    price: '₺4.190',
-    description: 'Dengeli oranları ve karakterli ahşap gövdesiyle hem ev hem de ticari projelerde kullanılabilen zamansız sandalye.',
-    defaultWood: 'Zeytin Ton',
-    defaultFabric: 'Taş'
+  "nova-plus": {
+    "title": "Nova Plus",
+    "original": "images/catalog/nova-plus.webp"
   },
-  arte: {
-    title: 'Arte',
-    price: '₺3.850',
-    description: 'Yuvarlatılmış hatları ve yalın görünümüyle çağdaş mekanlara uyum sağlayan, kumaş ve ahşap tonu seçilebilir sandalye.',
-    defaultWood: 'Doğal',
-    defaultFabric: 'Krem'
+  "scala": {
+    "title": "Scala",
+    "original": "images/catalog/scala.webp"
   },
-  lead: {
-    title: 'Lead',
-    price: '₺3.590',
-    description: 'Kompakt formu, dengeli oturumu ve ahşap detaylarıyla farklı masa gruplarına kolayca eşlik eden model.',
-    defaultWood: 'Koyu Ceviz',
-    defaultFabric: 'Gri'
+  "lead": {
+    "title": "Lead",
+    "original": "images/catalog/lead.webp"
   },
-  tesla: {
-    title: 'Tesla',
-    price: '₺3.940',
-    description: 'Modern çizgileri ve sade gövde formuyla restoran, kafe ve yaşam alanlarına uyarlanabilen ahşap sandalye.',
-    defaultWood: 'Greige',
-    defaultFabric: 'Taş'
+  "nova": {
+    "title": "Nova",
+    "original": "images/catalog/nova.webp"
+  },
+  "icon": {
+    "title": "Icon",
+    "original": "images/catalog/icon.webp",
+    "views": [
+      "original"
+    ]
+  },
+  "arte": {
+    "title": "Arte",
+    "original": "images/catalog/arte.webp"
   }
 };
-
-const WOOD_OPTIONS = [
-  { name: 'Doğal', className: 'wood-natural' },
-  { name: 'Ceviz', className: 'wood-walnut' },
-  { name: 'Koyu Ceviz', className: 'wood-dark-walnut' },
-  { name: 'Siyah', className: 'wood-black' },
-  { name: 'Greige', className: 'wood-greige' },
-  { name: 'Zeytin Ton', className: 'wood-olive' }
-];
-
-const FABRIC_OPTIONS = [
-  { name: 'Krem', className: 'fabric-cream' },
-  { name: 'Taş', className: 'fabric-stone' },
-  { name: 'Vizon', className: 'fabric-mink' },
-  { name: 'Gri', className: 'fabric-grey' },
-  { name: 'Antrasit', className: 'fabric-anthracite' },
-  { name: 'Kiremit', className: 'fabric-terracotta' }
-];
+const PRODUCTS = {
+  "angel": {
+    "title": "Angel",
+    "description": "Angel, ahşap gövde ve döşemeli oturumuyla ahşap rengi ve kumaşı seçilebilir sandalye modeli.",
+    "backHeight": 88,
+    "depth": 48,
+    "seatHeight": 48,
+    "fabricMeters": "1,60"
+  },
+  "tesla": {
+    "title": "Tesla",
+    "description": "Modern çizgileri ve sade gövde formuyla restoran, kafe ve yaşam alanlarına uyarlanabilen ahşap sandalye.",
+    "backHeight": 88,
+    "depth": 48,
+    "seatHeight": 48,
+    "fabricMeters": "1,60"
+  },
+  "beny": {
+    "title": "Beny",
+    "description": "Beny, ahşap gövde ve döşemeli oturumuyla ahşap rengi ve kumaşı seçilebilir sandalye modeli.",
+    "backHeight": 85,
+    "depth": 50,
+    "seatHeight": 48,
+    "fabricMeters": "2,50"
+  },
+  "nova-plus": {
+    "title": "Nova Plus",
+    "description": "Daha belirgin sırt formu ve güçlü duruşuyla konforu öne çıkaran, ahşap rengi ve kumaşı özelleştirilebilir model.",
+    "backHeight": 85,
+    "depth": 48,
+    "seatHeight": 48,
+    "fabricMeters": "3,40"
+  },
+  "scala": {
+    "title": "Scala",
+    "description": "Kavisli sırt yapısı ve yumuşak döşemesiyle modern yaşam alanlarına uyum sağlayan, zarif hatlı ahşap sandalye.",
+    "backHeight": 85,
+    "depth": 48,
+    "seatHeight": 48,
+    "fabricMeters": "2,50"
+  },
+  "lead": {
+    "title": "Lead",
+    "description": "Kompakt formu, dengeli oturumu ve ahşap detaylarıyla farklı masa gruplarına kolayca eşlik eden model.",
+    "backHeight": 85,
+    "depth": 46,
+    "seatHeight": 48,
+    "fabricMeters": "1,80"
+  },
+  "nova": {
+    "title": "Nova",
+    "description": "Yumuşak formu ve sade çizgileriyle yemek alanları, kafe ve restoran projelerinde rahatlıkla kullanılabilen ahşap sandalye.",
+    "backHeight": 85,
+    "depth": 45,
+    "seatHeight": 48,
+    "fabricMeters": "2,50"
+  },
+  "icon": {
+    "title": "Icon",
+    "description": "Icon, ahşap gövde ve döşemeli oturumuyla ahşap rengi ve kumaşı seçilebilir sandalye modeli.",
+    "backHeight": 85,
+    "depth": 46,
+    "seatHeight": 48,
+    "fabricMeters": "1,60"
+  },
+  "arte": {
+    "title": "Arte",
+    "description": "Yuvarlatılmış hatları ve yalın görünümüyle çağdaş mekanlara uyum sağlayan, kumaş ve ahşap tonu seçilebilir sandalye.",
+    "backHeight": 85,
+    "depth": 46,
+    "seatHeight": 48,
+    "fabricMeters": "1,60"
+  }
+};
 
 const GALLERY_VIEWS = [
   { key: 'original', label: 'Ana görünüm' },
@@ -127,7 +170,7 @@ if (galleryModal) {
     const gallery = PRODUCT_GALLERIES[slug];
     const views = gallery.views
       ? GALLERY_VIEWS.filter(view => gallery.views.includes(view.key))
-      : GALLERY_VIEWS;
+      : GALLERY_VIEWS.filter(view => view.key === 'original');
 
     return views.map(view => ({
       label: view.label,
@@ -226,128 +269,23 @@ if (filterBtns.length > 0 && cards.length > 0) {
 // ==========================================
 const productDetailPage = document.getElementById('productDetailPage');
 if (productDetailPage) {
-  const params = new URLSearchParams(window.location.search);
-  const requestedSlug = params.get('model') || 'scala';
+  const requestedSlug = new URLSearchParams(window.location.search).get('model') || 'scala';
   const slug = PRODUCTS[requestedSlug] ? requestedSlug : 'scala';
   const product = PRODUCTS[slug];
   const gallery = PRODUCT_GALLERIES[slug];
-
-  document.title = `Flamingo Sandalye — ${product.title}`;
-
-  const detailTitle = document.getElementById('detailTitle');
-  const detailBreadcrumb = document.getElementById('detailBreadcrumb');
-  const detailDescription = document.getElementById('detailDescription');
-  const detailPrice = document.getElementById('detailPrice');
-  const detailMainImage = document.getElementById('detailMainImage');
-  const detailThumbs = document.getElementById('detailThumbs');
-  const woodOptions = document.getElementById('woodOptions');
-  const fabricOptions = document.getElementById('fabricOptions');
-  const woodCurrent = document.getElementById('woodCurrent');
-  const fabricCurrent = document.getElementById('fabricCurrent');
-  const quantityInput = document.getElementById('detailQuantity');
-  const summary = document.getElementById('detailSelectionSummary');
-  const whatsappButton = document.getElementById('detailWhatsApp');
-
-  let selectedWood = product.defaultWood;
-  let selectedFabric = product.defaultFabric;
-
-  detailTitle.textContent = product.title;
-  detailBreadcrumb.textContent = product.title;
-  detailDescription.textContent = product.description;
-  detailPrice.textContent = product.price;
-
-  function detailGalleryItems() {
-    const views = gallery.views
-      ? GALLERY_VIEWS.filter(view => gallery.views.includes(view.key))
-      : GALLERY_VIEWS;
-
-    return views.map(view => ({
-      label: view.label,
-      src: view.key === 'original' ? gallery.original : `images/gallery/${slug}-${view.key}.webp`
-    }));
-  }
-
-  const galleryItems = detailGalleryItems();
-  detailMainImage.src = galleryItems[0].src;
-  detailMainImage.alt = `${product.title} sandalye — ${galleryItems[0].label}`;
-  detailThumbs.innerHTML = galleryItems.map((item, index) => `
-    <button type="button" class="detail-thumb${index === 0 ? ' active' : ''}" data-index="${index}" aria-label="${item.label} görünümünü aç">
-      <img src="${item.src}" alt="" loading="lazy">
-      <span>${item.label}</span>
-    </button>
-  `).join('');
-
-  detailThumbs.addEventListener('click', event => {
-    const button = event.target.closest('.detail-thumb');
-    if (!button) return;
-    const item = galleryItems[Number(button.dataset.index)];
-    detailMainImage.src = item.src;
-    detailMainImage.alt = `${product.title} sandalye — ${item.label}`;
-    detailThumbs.querySelectorAll('.detail-thumb').forEach(thumb => thumb.classList.remove('active'));
-    button.classList.add('active');
-  });
-
-  function renderOptionButtons(container, options, selectedValue, type) {
-    container.innerHTML = options.map(option => `
-      <button type="button" class="material-option${option.name === selectedValue ? ' selected' : ''}" data-value="${option.name}" role="radio" aria-checked="${option.name === selectedValue}">
-        <span class="material-swatch ${option.className}" aria-hidden="true"></span>
-        <span>${option.name}</span>
-      </button>
-    `).join('');
-
-    container.addEventListener('click', event => {
-      const button = event.target.closest('.material-option');
-      if (!button) return;
-      container.querySelectorAll('.material-option').forEach(option => {
-        option.classList.remove('selected');
-        option.setAttribute('aria-checked', 'false');
-      });
-      button.classList.add('selected');
-      button.setAttribute('aria-checked', 'true');
-
-      if (type === 'wood') {
-        selectedWood = button.dataset.value;
-        woodCurrent.textContent = selectedWood;
-      } else {
-        selectedFabric = button.dataset.value;
-        fabricCurrent.textContent = selectedFabric;
-      }
-      updateSelectionSummary();
-    });
-  }
-
-  function safeQuantity() {
-    const parsed = Number.parseInt(quantityInput.value, 10);
-    return Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
-  }
-
-  function updateSelectionSummary() {
-    const quantity = safeQuantity();
-    summary.textContent = `${product.title} · ${selectedWood} · ${selectedFabric} · ${quantity} adet`;
-  }
-
-  woodCurrent.textContent = selectedWood;
-  fabricCurrent.textContent = selectedFabric;
-  renderOptionButtons(woodOptions, WOOD_OPTIONS, selectedWood, 'wood');
-  renderOptionButtons(fabricOptions, FABRIC_OPTIONS, selectedFabric, 'fabric');
-  updateSelectionSummary();
-
-  quantityInput.addEventListener('input', updateSelectionSummary);
-  quantityInput.addEventListener('change', () => {
-    if (safeQuantity() !== Number.parseInt(quantityInput.value, 10)) quantityInput.value = '1';
-    updateSelectionSummary();
-  });
-
-  whatsappButton.addEventListener('click', () => {
-    const quantity = safeQuantity();
-    openWhatsApp(
-      `Merhaba, ${product.title} modeliyle ilgileniyorum.\n\n` +
-      `Ahşap rengi: ${selectedWood}\n` +
-      `Kumaş: ${selectedFabric}\n` +
-      `Adet: ${quantity}\n\n` +
-      `Bu kombinasyon için güncel fiyat, üretim süresi ve kartela bilgisi alabilir miyim?`
-    );
-  });
+  document.title = 'Flamingo Sandalye - ' + product.title;
+  document.getElementById('detailTitle').textContent = product.title;
+  document.getElementById('detailBreadcrumb').textContent = product.title;
+  document.getElementById('detailDescription').textContent = product.description;
+  const image = document.getElementById('detailMainImage');
+  image.src = gallery.original;
+  image.alt = product.title + ' sandalye - katalog';
+  document.getElementById('detailBackHeight').textContent = product.backHeight + ' cm';
+  document.getElementById('detailDepth').textContent = product.depth + ' cm';
+  document.getElementById('detailSeatHeight').textContent = product.seatHeight + ' cm';
+  document.getElementById('detailFabricMeters').textContent = product.fabricMeters + ' m / 2 adet';
+  const contact = document.getElementById('detailWhatsApp');
+  contact.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent('Merhaba, ' + product.title + ' sandalye modeli ve siparişe özel kumaş / ahşap rengi seçenekleri hakkında bilgi almak istiyorum.');
 }
 
 // ==========================================

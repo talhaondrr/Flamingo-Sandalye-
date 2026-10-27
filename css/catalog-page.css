@@ -1,0 +1,13 @@
+.section-head h1 { font: 400 clamp(3rem, 5vw, 4.8rem)/1.1 Georgia, serif; }
+.catalog-specs { margin: 20px 28px 0; font-size: .75rem; }
+.catalog-specs > div { display: flex; justify-content: space-between; gap: 14px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.catalog-specs dt { color: var(--muted); }
+.catalog-specs dd { text-align: right; margin: 0; }
+.card--photo .product-open img { height: auto; aspect-ratio: 1; object-fit: contain; }
+.card--photo .product-card-actions { margin-top: auto; padding-top: 20px; padding-bottom: 26px; }
+.card--photo .product-detail-link { background: var(--rose-deep); border-color: var(--rose-deep); color: #fff; }
+.card--photo .product-detail-link:hover { background: #793d4d; border-color: #793d4d; color: #fff; }
+.detail-main-image { object-fit: contain; }
+.catalog-contact { display:flex; align-items:center; justify-content:center; margin-top:24px; text-align:center; }
+.detail-features > div { flex-wrap: wrap; gap: 5px 12px; }
+@media(max-width:560px) { .catalog-specs { margin-inline: 22px; } }
