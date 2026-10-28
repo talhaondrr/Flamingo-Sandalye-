@@ -1,0 +1,151 @@
+{
+  "tool": "built-in image_gen",
+  "type": "AI-generated illustrative alternate product views",
+  "referenceDirectory": "images/catalog",
+  "outputs": [
+    {
+      "slug": "angel",
+      "view": "right",
+      "path": "images/gallery/generated/angel-right.webp",
+      "prompt": "Use case: product-mockup. Edit supplied Angel chair photo. Full chair, pure side profile; front of seat points LEFT, backrest is on RIGHT of image. Preserve exact walnut frame, black leather, rounded backrest and narrow wooden rear rail, same cream room and daylight. No text or collage."
+    },
+    {
+      "slug": "angel",
+      "view": "left",
+      "path": "images/gallery/generated/angel-left.webp",
+      "prompt": "Use case: product-mockup. Edit supplied Angel chair photo. Full chair, pure opposite side profile; front of seat points RIGHT, backrest is on LEFT of image. Physically move camera around chair; do not mirror entire scene. Preserve exact walnut frame, black leather, rounded backrest and narrow wooden rear rail, same cream room and daylight. No text or collage."
+    },
+    {
+      "slug": "angel",
+      "view": "back",
+      "path": "images/gallery/generated/angel-back.webp",
+      "prompt": "Use case: product-mockup. Edit supplied Angel chair photo. Full chair, straight REAR view, both rear supports visible, seat extends away from camera. Preserve exact walnut frame, black leather, rounded backrest and narrow wooden rear rail, same cream room and daylight. No text or collage."
+    },
+    {
+      "slug": "angel",
+      "view": "detail",
+      "path": "images/gallery/generated/angel-detail.webp",
+      "prompt": "Use case: product-mockup. Edit supplied Angel chair photo. Tight macro close-up of upholstery/backrest meeting the frame, showing textile, seams and joinery. Not entire chair. Preserve exact walnut frame, black leather, rounded backrest and narrow wooden rear rail, same cream room and daylight. No text or collage."
+    },
+    {
+      "slug": "tesla",
+      "view": "right",
+      "path": "images/gallery/generated/tesla-right.webp",
+      "prompt": "Use case: product-mockup. Edit target: supplied Tesla chair photo. Create ONE photorealistic additional catalog image of EXACTLY this chair. Walnut chair with four straight rectangular wooden legs, two tall parallel rectangular rear uprights and two short horizontal connecting rungs, black seat upholstery, wide rounded trapezoid backrest upholstered in black fabric with taupe abstract organic pattern. Preserve that pattern and exact walnut frame. Full chair, pure side profile; front of seat points LEFT, backrest is on RIGHT of image. Keep same warm cream interior with walnut sideboard, rug and soft daylight. Chair colors, materials, proportions and construction must remain identical to reference. Infer unseen geometry conservatively. No collage, text, watermark or additional chairs."
+    },
+    {
+      "slug": "tesla",
+      "view": "left",
+      "path": "images/gallery/generated/tesla-left.webp",
+      "prompt": "Use case: product-mockup. Edit target: supplied Tesla chair photo. Create ONE photorealistic additional catalog image of EXACTLY this chair. Walnut chair with four straight rectangular wooden legs, two tall parallel rectangular rear uprights and two short horizontal connecting rungs, black seat upholstery, wide rounded trapezoid backrest upholstered in black fabric with taupe abstract organic pattern. Preserve that pattern and exact walnut frame. Full chair, pure opposite side profile; front of seat points RIGHT, backrest is on LEFT of image. Physically move camera around chair; do not mirror entire scene. Keep same warm cream interior with walnut sideboard, rug and soft daylight. Chair colors, materials, proportions and construction must remain identical to reference. Infer unseen geometry conservatively. No collage, text, watermark or additional chairs."
+    },
+    {
+      "slug": "tesla",
+      "view": "back",
+      "path": "images/gallery/generated/tesla-back.webp",
+      "prompt": "Use case: product-mockup. Edit target: supplied Tesla chair photo. Create ONE photorealistic additional catalog image of EXACTLY this chair. Walnut chair with four straight rectangular wooden legs, two tall parallel rectangular rear uprights and two short horizontal connecting rungs, black seat upholstery, wide rounded trapezoid backrest upholstered in black fabric with taupe abstract organic pattern. Preserve that pattern and exact walnut frame. Full chair, straight REAR view, both rear supports visible, seat extends away from camera. Keep same warm cream interior with walnut sideboard, rug and soft daylight. Chair colors, materials, proportions and construction must remain identical to reference. Infer unseen geometry conservatively. No collage, text, watermark or additional chairs."
+    },
+    {
+      "slug": "tesla",
+      "view": "detail",
+      "path": "images/gallery/generated/tesla-detail.webp",
+      "prompt": "Use case: product-mockup. Edit target: supplied Tesla chair photo. Create ONE photorealistic additional catalog image of EXACTLY this chair. Walnut chair with four straight rectangular wooden legs, two tall parallel rectangular rear uprights and two short horizontal connecting rungs, black seat upholstery, wide rounded trapezoid backrest upholstered in black fabric with taupe abstract organic pattern. Preserve that pattern and exact walnut frame. Tight macro close-up of upholstery/backrest meeting the frame, showing textile, seams and joinery. Not entire chair. Keep same warm cream interior with walnut sideboard, rug and soft daylight. Chair colors, materials, proportions and construction must remain identical to reference. Infer unseen geometry conservatively. No collage, text, watermark or additional chairs."
+    },
+    {
+      "slug": "beny",
+      "view": "right",
+      "path": "images/gallery/generated/beny-right.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Beny chair. ONE photorealistic additional catalog photo of EXACT chair. Dark walnut armchair, dark brown leather seat and low wraparound leather backrest joined to sculpted solid walnut arms and splayed legs. Preserve distinctive triangular open gaps below the armrests and continuous angular walnut side frames, exact stitching and leather color. Full chair, pure side profile; front of seat points LEFT, backrest is on RIGHT of image. Same warm beige living room with walnut sideboard and rug, soft daylight. Preserve exact frame construction, dimensions, brown leather color, stitching, no invented components, hidden geometry inferred conservatively. No text, collage or extra chairs."
+    },
+    {
+      "slug": "beny",
+      "view": "left",
+      "path": "images/gallery/generated/beny-left.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Beny chair. ONE photorealistic additional catalog photo of EXACT chair. Dark walnut armchair, dark brown leather seat and low wraparound leather backrest joined to sculpted solid walnut arms and splayed legs. Preserve distinctive triangular open gaps below the armrests and continuous angular walnut side frames, exact stitching and leather color. Full chair, pure opposite side profile; front of seat points RIGHT, backrest is on LEFT of image. Physically move camera around chair; do not mirror entire scene. Same warm beige living room with walnut sideboard and rug, soft daylight. Preserve exact frame construction, dimensions, brown leather color, stitching, no invented components, hidden geometry inferred conservatively. No text, collage or extra chairs."
+    },
+    {
+      "slug": "beny",
+      "view": "back",
+      "path": "images/gallery/generated/beny-back.webp",
+      "prompt": "Use case: precise-object-edit. Image is edit target, a generated catalog draft. Change ONLY lower leg alignment. User correction: front and rear legs on each side must line up on the same longitudinal track when seen from behind. Center the camera exactly behind the chair: left front leg aligns directly behind left rear leg, right front directly behind right rear; no sideways offset or twisted stance. Keep all four legs physically plausible and their existing slender thickness. Preserve the entire backrest, seat, arms, colors, room and lighting. Single photorealistic image; no text or collage."
+    },
+    {
+      "slug": "beny",
+      "view": "detail",
+      "path": "images/gallery/generated/beny-detail.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Beny chair. ONE photorealistic additional catalog photo of EXACT chair. Dark walnut armchair, dark brown leather seat and low wraparound leather backrest joined to sculpted solid walnut arms and splayed legs. Preserve distinctive triangular open gaps below the armrests and continuous angular walnut side frames, exact stitching and leather color. Tight macro close-up of upholstery/backrest meeting the frame, showing textile, seams and joinery. Not entire chair. Same warm beige living room with walnut sideboard and rug, soft daylight. Preserve exact frame construction, dimensions, brown leather color, stitching, no invented components, hidden geometry inferred conservatively. No text, collage or extra chairs."
+    },
+    {
+      "slug": "icon",
+      "view": "right",
+      "path": "images/gallery/generated/icon-right.webp",
+      "prompt": "Use case: precise-object-edit. Image is edit target, a generated catalog draft. Change ONLY the rear support leg BELOW THE SEAT. User correction: rear leg is SLIM and descends STRAIGHT VERTICALLY, constant narrow thickness from under seat to floor, comparable to front legs; absolutely NO widening toward floor, NO triangular wedge, NO broad pedestal. Keep the backrest support above seat and all upholstery, front legs, camera view, room and lighting unchanged. This is a narrow straight leg, not a tapered plinth. Single photorealistic image; no text or collage."
+    },
+    {
+      "slug": "icon",
+      "view": "left",
+      "path": "images/gallery/generated/icon-left.webp",
+      "prompt": "Use case: precise-object-edit. Image is edit target, a generated catalog draft. Change ONLY the rear support leg BELOW THE SEAT. User correction: rear leg is SLIM and descends STRAIGHT VERTICALLY, constant narrow thickness from under seat to floor, comparable to front legs; absolutely NO widening toward floor, NO triangular wedge, NO broad pedestal. Keep the backrest support above seat and all upholstery, front legs, camera view, room and lighting unchanged. This is a narrow straight leg, not a tapered plinth. Single photorealistic image; no text or collage."
+    },
+    {
+      "slug": "icon",
+      "view": "back",
+      "path": "images/gallery/generated/icon-back.webp",
+      "prompt": "Use case: precise-object-edit. Image is edit target, a generated catalog draft. Change ONLY the rear support leg BELOW THE SEAT. User correction: rear leg is SLIM and descends STRAIGHT VERTICALLY, constant narrow thickness from under seat to floor, comparable to front legs; absolutely NO widening toward floor, NO triangular wedge, NO broad pedestal. Keep the backrest support above seat and all upholstery, front legs, camera view, room and lighting unchanged. This is a narrow straight leg, not a tapered plinth. Single photorealistic image; no text or collage."
+    },
+    {
+      "slug": "icon",
+      "view": "detail",
+      "path": "images/gallery/generated/icon-detail.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Icon chair. ONE photorealistic additional catalog photo of EXACT chair. Champagne taupe frame chair with light oatmeal woven upholstered rounded rectangular backrest, thick rounded seat, distinctive single broad tapered central rear support extending from floor to middle of backrest, and two separate slim front legs. Preserve three-legged central rear pedestal geometry, satin taupe finish, no extra rear legs. Tight macro close-up of upholstery/backrest meeting the frame, showing textile, seams and joinery. Not entire chair. Same warm neutral room with vertical wooden slats, stone floor, natural sunlight. Preserve exact frame construction, dimensions, taupe and oatmeal colors, no invented components, hidden geometry inferred conservatively. No text, collage or extra chairs."
+    },
+    {
+      "slug": "lead",
+      "view": "right",
+      "path": "images/gallery/generated/lead-right.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Lead chair. ONE photorealistic additional catalog photo of EXACT chair. Light ivory textured woven upholstered chair with broad curved inverted-triangle backrest, taupe-grey satin wooden frame, four slender tapered round-section legs, two rear uprights supporting backrest. Preserve exact taupe-grey frame color; NOT dark walnut. Full chair, pure side profile; front of seat points LEFT, backrest is on RIGHT of image. Same airy warm grey-beige dining room, taupe sideboard, oak floor, rug, soft daylight. Preserve exact construction, proportions and colors, hidden geometry inferred conservatively. No text, collage or additional chairs."
+    },
+    {
+      "slug": "lead",
+      "view": "left",
+      "path": "images/gallery/generated/lead-left.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Lead chair. ONE photorealistic additional catalog photo of EXACT chair. Light ivory textured woven upholstered chair with broad curved inverted-triangle backrest, taupe-grey satin wooden frame, four slender tapered round-section legs, two rear uprights supporting backrest. Preserve exact taupe-grey frame color; NOT dark walnut. Full chair, pure opposite side profile; front of seat points RIGHT, backrest is on LEFT of image. Physically move camera around chair; do not mirror entire scene. Same airy warm grey-beige dining room, taupe sideboard, oak floor, rug, soft daylight. Preserve exact construction, proportions and colors, hidden geometry inferred conservatively. No text, collage or additional chairs."
+    },
+    {
+      "slug": "lead",
+      "view": "back",
+      "path": "images/gallery/generated/lead-back.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Lead chair. ONE photorealistic additional catalog photo of EXACT chair. Light ivory textured woven upholstered chair with broad curved inverted-triangle backrest, taupe-grey satin wooden frame, four slender tapered round-section legs, two rear uprights supporting backrest. Preserve exact taupe-grey frame color; NOT dark walnut. Full chair, straight REAR view, both rear supports visible, seat extends away from camera. Same airy warm grey-beige dining room, taupe sideboard, oak floor, rug, soft daylight. Preserve exact construction, proportions and colors, hidden geometry inferred conservatively. No text, collage or additional chairs."
+    },
+    {
+      "slug": "lead",
+      "view": "detail",
+      "path": "images/gallery/generated/lead-detail.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied Lead chair. ONE photorealistic additional catalog photo of EXACT chair. Light ivory textured woven upholstered chair with broad curved inverted-triangle backrest, taupe-grey satin wooden frame, four slender tapered round-section legs, two rear uprights supporting backrest. Preserve exact taupe-grey frame color; NOT dark walnut. Tight macro close-up of upholstery/backrest meeting the frame, showing textile, seams and joinery. Not entire chair. Same airy warm grey-beige dining room, taupe sideboard, oak floor, rug, soft daylight. Preserve exact construction, proportions and colors, hidden geometry inferred conservatively. No text, collage or additional chairs."
+    },
+    {
+      "slug": "nova-plus",
+      "view": "left",
+      "path": "images/gallery/generated/nova-plus-left.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied original chair photo. Create ONE photorealistic additional catalog photo of EXACT same chair. Full chair LEFT SIDE profile, front of seat points RIGHT. Keep exact grey boucle wraparound armchair shell, high back, thick padded arms and walnut tapered legs. Physically move camera around chair; do not mirror background. Same warm cream interior and soft daylight as source. Preserve materials, colors and construction. Infer hidden geometry conservatively. No text, collage, watermark or extra chairs."
+    },
+    {
+      "slug": "nova",
+      "view": "left",
+      "path": "images/gallery/generated/nova-left.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied original chair photo. Create ONE photorealistic additional catalog photo of EXACT same chair. Full chair LEFT SIDE profile, front of seat points RIGHT. Preserve exact ivory upholstered tall rounded back and seat, champagne-taupe slim straight legs and exact proportions. Physically move camera around chair; do not mirror background. Same warm cream interior and soft daylight as source. Preserve materials, colors and construction. Infer hidden geometry conservatively. No text, collage, watermark or extra chairs."
+    },
+    {
+      "slug": "arte",
+      "view": "left",
+      "path": "images/gallery/generated/arte-left.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied original chair photo. Create ONE photorealistic additional catalog photo of EXACT same chair. Full chair LEFT SIDE profile, front of seat points RIGHT. Preserve exact white boucle rounded seat and low curved oval backrest, satin taupe frame, four narrow straight legs, curved flat support from seat frame up to backrest. Same room, chair fills most of photo. Physically move camera around chair; do not mirror background. Same warm cream interior and soft daylight as source. Preserve materials, colors and construction. Infer hidden geometry conservatively. No text, collage, watermark or extra chairs."
+    },
+    {
+      "slug": "arte",
+      "view": "back",
+      "path": "images/gallery/generated/arte-back.webp",
+      "prompt": "Use case: product-mockup. Edit target supplied original chair photo. Create ONE photorealistic additional catalog photo of EXACT same chair. Full chair straight REAR view. Preserve exact wide white boucle curved oval backrest and rounded seat, satin taupe frame, four narrow straight legs, curved flat backrest support and proportions. No bolts added, no redesign. All feet on level floor. Physically move camera around chair; do not mirror background. Same warm cream interior and soft daylight as source. Preserve materials, colors and construction. Infer hidden geometry conservatively. No text, collage, watermark or extra chairs."
+    }
+  ]
+}

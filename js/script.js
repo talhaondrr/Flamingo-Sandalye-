@@ -18,7 +18,10 @@ const PRODUCT_GALLERIES = {
   },
   "tesla": {
     "title": "Tesla",
-    "original": "images/catalog/tesla.webp"
+    "original": "images/catalog/tesla.webp",
+    "views": [
+      "original"
+    ]
   },
   "beny": {
     "title": "Beny",
@@ -29,19 +32,31 @@ const PRODUCT_GALLERIES = {
   },
   "nova-plus": {
     "title": "Nova Plus",
-    "original": "images/catalog/nova-plus.webp"
+    "original": "images/catalog/nova-plus.webp",
+    "views": [
+      "original"
+    ]
   },
   "scala": {
     "title": "Scala",
-    "original": "images/catalog/scala.webp"
+    "original": "images/catalog/scala.webp",
+    "views": [
+      "original"
+    ]
   },
   "lead": {
     "title": "Lead",
-    "original": "images/catalog/lead.webp"
+    "original": "images/catalog/lead.webp",
+    "views": [
+      "original"
+    ]
   },
   "nova": {
     "title": "Nova",
-    "original": "images/catalog/nova.webp"
+    "original": "images/catalog/nova.webp",
+    "views": [
+      "original"
+    ]
   },
   "icon": {
     "title": "Icon",
@@ -52,7 +67,10 @@ const PRODUCT_GALLERIES = {
   },
   "arte": {
     "title": "Arte",
-    "original": "images/catalog/arte.webp"
+    "original": "images/catalog/arte.webp",
+    "views": [
+      "original"
+    ]
   }
 };
 const PRODUCTS = {
@@ -139,9 +157,19 @@ const GALLERY_VIEWS = [
   { key: 'detail', label: 'Detay' }
 ];
 
+function galleryItems(slug) {
+  const gallery = PRODUCT_GALLERIES[slug];
+  return GALLERY_VIEWS.filter(view => (gallery.views || ['original']).includes(view.key)).map(view => ({
+    key: view.key,
+    label: view.label,
+    src: view.key === 'original' ? gallery.original : (gallery.images?.[view.key] || `images/gallery/${slug}-${view.key}.webp`)
+  }));
+}
+
 function openWhatsApp(message) {
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank', 'noopener,noreferrer');
+  return url;
 }
 
 document.querySelectorAll('.product-whatsapp').forEach(container => {
@@ -160,23 +188,11 @@ const galleryModal = document.getElementById('galleryModal');
 if (galleryModal) {
   const galleryImage = document.getElementById('galleryImage');
   const galleryTitle = document.getElementById('galleryTitle');
-  const galleryCaption = document.getElementById('galleryCaption');
   const galleryThumbs = document.getElementById('galleryThumbs');
   let activeGallery = null;
   let activeIndex = 0;
   let lastFocused = null;
 
-  function galleryItems(slug) {
-    const gallery = PRODUCT_GALLERIES[slug];
-    const views = gallery.views
-      ? GALLERY_VIEWS.filter(view => gallery.views.includes(view.key))
-      : GALLERY_VIEWS.filter(view => view.key === 'original');
-
-    return views.map(view => ({
-      label: view.label,
-      src: view.key === 'original' ? gallery.original : `images/gallery/${slug}-${view.key}.webp`
-    }));
-  }
 
   function renderGallery() {
     const gallery = PRODUCT_GALLERIES[activeGallery];
@@ -185,7 +201,6 @@ if (galleryModal) {
     galleryTitle.textContent = `${gallery.title} Fotoğrafları`;
     galleryImage.src = item.src;
     galleryImage.alt = `${gallery.title} sandalye — ${item.label}`;
-    galleryCaption.textContent = items.length > 1 ? `${activeIndex + 1} / ${items.length}` : `${gallery.title} — ana görünüm`;
 
     const prevButton = galleryModal.querySelector('.gallery-prev');
     const nextButton = galleryModal.querySelector('.gallery-next');
@@ -195,7 +210,7 @@ if (galleryModal) {
     galleryThumbs.style.display = hasMultipleImages ? '' : 'none';
 
     galleryThumbs.innerHTML = items.map((thumb, index) =>
-      `<button type="button" class="gallery-thumb${index === activeIndex ? ' active' : ''}" data-index="${index}" aria-label="${thumb.label} görünümünü aç"><img src="${thumb.src}" alt="" loading="lazy"></button>`
+      `<button type="button" class="gallery-thumb${index === activeIndex ? ' active' : ''}" data-index="${index}" aria-pressed="${index === activeIndex}" aria-label="${thumb.label} görünümünü aç"><img src="${thumb.src}" alt="" loading="lazy"><span>${thumb.label}</span></button>`
     ).join('');
   }
 
@@ -269,23 +284,49 @@ if (filterBtns.length > 0 && cards.length > 0) {
 // ==========================================
 const productDetailPage = document.getElementById('productDetailPage');
 if (productDetailPage) {
-  const requestedSlug = new URLSearchParams(window.location.search).get('model') || 'scala';
-  const slug = PRODUCTS[requestedSlug] ? requestedSlug : 'scala';
+  const requestedSlug = new URLSearchParams(window.location.search).get('model');
+  const slug = Object.hasOwn(PRODUCTS, requestedSlug) ? requestedSlug : null;
+  if (!slug) {
+    document.title = 'Model bulunamadı — Flamingo Sandalye';
+    document.querySelector('meta[name="description"]').content = 'Aradığınız sandalye modeli bulunamadı. Flamingo Sandalye modellerini inceleyebilirsiniz.';
+    const robots = document.createElement('meta');
+    robots.name = 'robots';
+    robots.content = 'noindex, follow';
+    document.head.append(robots);
+    productDetailPage.querySelector('.wrap').innerHTML = '<section class="detail-panel"><h1>Model bulunamadı</h1><p class="detail-description">Bu bağlantıya ait bir model bulunamadı. Tüm sandalye modellerimizi inceleyebilirsiniz.</p><a class="detail-back-button" href="urunler.html">Modellere dön →</a></section>';
+  } else {
   const product = PRODUCTS[slug];
   const gallery = PRODUCT_GALLERIES[slug];
   document.title = 'Flamingo Sandalye - ' + product.title;
+  document.querySelector('meta[name="description"]').content = product.description;
+  document.querySelector('meta[property="og:title"]').content = document.title;
+  document.querySelector('meta[property="og:description"]').content = product.description;
   document.getElementById('detailTitle').textContent = product.title;
   document.getElementById('detailBreadcrumb').textContent = product.title;
   document.getElementById('detailDescription').textContent = product.description;
   const image = document.getElementById('detailMainImage');
   image.src = gallery.original;
   image.alt = product.title + ' sandalye - katalog';
+  const otherModelsTrack = document.getElementById('featuredTrack');
+  if (otherModelsTrack) {
+    otherModelsTrack.innerHTML = Object.entries(PRODUCTS)
+      .filter(([modelSlug]) => modelSlug !== slug)
+      .map(([modelSlug, model]) => `
+        <article class="featured-card">
+          <a class="featured-image" href="urun-detay.html?model=${modelSlug}"><img src="${PRODUCT_GALLERIES[modelSlug].original}" alt="${model.title} sandalye" loading="lazy"/></a>
+          <div class="featured-copy">
+            <div><h3>${model.title}</h3><p>Ahşap gövde · Döşemeli</p></div>
+            <a href="urun-detay.html?model=${modelSlug}">Detayları İncele <span aria-hidden="true">→</span></a>
+          </div>
+        </article>`).join('');
+  }
   document.getElementById('detailBackHeight').textContent = product.backHeight + ' cm';
   document.getElementById('detailDepth').textContent = product.depth + ' cm';
   document.getElementById('detailSeatHeight').textContent = product.seatHeight + ' cm';
   document.getElementById('detailFabricMeters').textContent = product.fabricMeters + ' m / 2 adet';
   const contact = document.getElementById('detailWhatsApp');
   contact.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent('Merhaba, ' + product.title + ' sandalye modeli ve siparişe özel kumaş / ahşap rengi seçenekleri hakkında bilgi almak istiyorum.');
+  }
 }
 
 // ==========================================
@@ -382,9 +423,19 @@ document.addEventListener("DOMContentLoaded", function () {
       const name = contactForm.querySelector('#name')?.value.trim() || '';
       const subject = contactForm.querySelector('#subject')?.value || '';
       const message = contactForm.querySelector('#message')?.value.trim() || '';
-      openWhatsApp(`Merhaba, ben ${name}.\nTalep konusu: ${subject}\n\n${message}`);
+      const url = openWhatsApp(`Merhaba, ben ${name}.\nTalep konusu: ${subject}\n\n${message}`);
 
-      if (formNote) formNote.textContent = "Mesajınız WhatsApp’ta açıldı. Göndermek için WhatsApp ekranından onaylayın.";
+      // noopener can return null even when a new tab opens successfully.
+      // Use neutral wording and always provide a safe, clickable alternative.
+      if (formNote) {
+        formNote.textContent = 'WhatsApp açılmadıysa ';
+        const fallback = document.createElement('a');
+        fallback.href = url;
+        fallback.target = '_blank';
+        fallback.rel = 'noopener noreferrer';
+        fallback.textContent = 'mesajınızı açmak için buraya tıklayın';
+        formNote.append(fallback, '. Göndermeden önce WhatsApp ekranından kontrol edin.');
+      }
     });
   }
 });

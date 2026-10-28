@@ -14,11 +14,13 @@
 .nav .nav-links .nav-catalog{color:#795e36;}
 .nav-catalog>span{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#e9dfcb;color:#795e36;font-size:14px;}
 .nav .nav-links a:focus-visible,.nav .brand:focus-visible{outline:2px solid #8f4a5c!important;outline-offset:3px;}
-.nav .nav-offer{min-height:42px;justify-content:center;padding:10px 18px;border-radius:9px;background:#382b24;box-shadow:none;font-size:.75rem;gap:14px;white-space:nowrap;}
-.nav .nav-offer:hover{background:#8f4a5c;}
-.nav .nav-instagram{width:42px;height:42px;border:1px solid #e6dad0;border-radius:12px;background:#fcf6f0;transition:background .2s,transform .2s;}
-.nav .nav-instagram:hover{background:#f2e7e6;transform:translateY(-1px);}
-.nav .nav-instagram i{font-size:22px;}
+.nav .nav-socials{display:flex;align-items:center;gap:8px;justify-self:end;}
+.nav .nav-social{display:flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;margin:0;border:1px solid #e6dad0;border-radius:12px;background:#fcf6f0;box-shadow:none;text-decoration:none;transition:background .2s,transform .2s;}
+.nav .nav-instagram{color:#a84275;}
+.nav .nav-whatsapp{color:#218c4c;}
+.nav .nav-social:hover{background:#f2e7e6;transform:translateY(-1px);}
+.nav .nav-social:focus-visible{outline:2px solid #8f4a5c;outline-offset:3px;}
+.nav .nav-social svg{display:block;width:22px;height:22px;}
 @media(max-width:1100px){
   .nav{padding:10px 16px;}
   .nav .wrap{gap:14px;padding:0 18px;}
@@ -30,7 +32,7 @@
   .nav{padding:9px 12px;}
   .nav .wrap{grid-template-columns:1fr auto;height:auto;padding:14px 16px 10px;gap:14px;border-radius:14px;}
   .nav .brand{grid-row:1;grid-column:1;}
-  .nav .nav-offer,.nav .nav-instagram{grid-row:1;grid-column:2;justify-self:end;}
+  .nav .nav-socials{grid-row:1;grid-column:2;justify-self:end;}
   .nav .nav-links{grid-row:2;grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;width:100%;border-top:1px solid #eee5dc;padding-top:10px;overflow:visible;}
   .nav .nav-links a{padding:10px 4px;font-size:.75rem;}
 }
@@ -44,6 +46,5 @@
   .nav .nav-links{gap:1px;padding-top:8px;}
   .nav .nav-links a{font-size:clamp(.6rem,2.65vw,.73rem);letter-spacing:-.02em;padding:10px 2px;gap:3px;}
   .nav-catalog>span{width:15px;height:15px;font-size:12px;}
-  .nav .nav-offer{font-size:.68rem;padding:9px 12px;min-height:37px;gap:9px;}
-  .nav .nav-instagram{width:37px;height:37px;}
+  .nav .nav-social{width:37px;height:37px;}
 }

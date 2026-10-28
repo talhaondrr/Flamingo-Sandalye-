@@ -10,4 +10,26 @@
 .detail-main-image { object-fit: contain; }
 .catalog-contact { display:flex; align-items:center; justify-content:center; margin-top:24px; text-align:center; }
 .detail-features > div { flex-wrap: wrap; gap: 5px 12px; }
+.breadcrumb .detail-back-button { display:inline-flex; align-items:center; gap:9px; min-height:44px; padding:10px 17px; border:1px solid var(--rose-deep); border-radius:10px; background:var(--rose-deep); color:#fff; font-size:.85rem; font-weight:600; }
+.breadcrumb .detail-back-button:hover { background:#793d4d; border-color:#793d4d; color:#fff; }
+.detail-whatsapp-btn.catalog-contact { background:var(--rose-deep); color:#fff; box-shadow:0 9px 22px rgba(143,74,92,.15); }
+.detail-whatsapp-btn.catalog-contact:hover { background:#793d4d; color:#fff; }
+.detail-info-section { grid-template-columns:1fr; }
+.detail-main-image-wrap { position:relative; }
+.detail-gallery-arrow { position:absolute; z-index:1; top:50%; transform:translateY(-50%); width:42px; height:42px; border:1px solid var(--line); border-radius:50%; background:rgba(255,253,249,.94); color:var(--rose-deep); font-size:30px; line-height:1; cursor:pointer; }
+.detail-gallery-prev { left:12px; }
+.detail-gallery-next { right:12px; }
+.detail-gallery-arrow:hover { background:var(--rose-deep); color:#fff; }
+.detail-gallery-caption { margin:12px 0; color:var(--muted); font-size:.8rem; }
+.detail-gallery-thumbs { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; }
+.detail-gallery-thumb { min-width:0; overflow:hidden; padding:0; border:2px solid transparent; border-radius:10px; background:var(--paper-2); color:var(--muted); font:inherit; cursor:pointer; }
+.detail-gallery-thumb[aria-pressed="true"] { border-color:var(--rose-deep); color:var(--rose-deep); }
+.detail-gallery-thumb img { width:100%; aspect-ratio:1; object-fit:contain; }
+.detail-gallery-thumb span,.gallery-thumb span { display:block; padding:6px 2px; font-size:.65rem; text-align:center; }
+.gallery-render-note { margin-top:12px; color:var(--muted); font-size:.7rem; line-height:1.5; }
+.gallery-thumbs { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.gallery-thumb img { object-fit:contain; }
+.detail-info-section>div:first-child { display:block; }
+.detail-other-models { margin-top:72px; padding-top:40px; border-top:1px solid var(--line); }
+@media(max-width:560px) { .detail-other-models { margin-top:48px; padding-top:30px; } }
 @media(max-width:560px) { .catalog-specs { margin-inline: 22px; } }
