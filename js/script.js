@@ -5,7 +5,7 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const cards = document.querySelectorAll('#productGrid .card');
 
 // WhatsApp numarasını ülke koduyla, boşluksuz biçimde buradan güncelleyin.
-const WHATSAPP_NUMBER = '905010951913';
+const WHATSAPP_NUMBER = '905010421616';
 
 // Kaynak: Kullanıcının kataloğu. Kumaş metrajı iki adet içindir.
 const PRODUCT_GALLERIES = {
@@ -175,7 +175,13 @@ function openWhatsApp(message) {
 document.querySelectorAll('.product-whatsapp').forEach(container => {
   const product = container.dataset.product;
   const message = `Merhaba, ${product} sandalye modeli hakkında ahşap rengi, kumaş seçenekleri, ölçü, güncel fiyat ve sipariş bilgisi almak istiyorum.`;
-  container.innerHTML = `<a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}" target="_blank" rel="noopener noreferrer" aria-label="${product} modeli için WhatsApp’tan iletişime geçiniz">WhatsApp’tan iletişime geçiniz</a>`;
+  const link = document.createElement('a');
+  link.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.setAttribute('aria-label', product + ' modeli için WhatsApp’tan iletişime geçiniz');
+  link.textContent = 'WhatsApp’tan iletişime geçiniz';
+  container.replaceChildren(link);
 });
 
 document.querySelectorAll('.whatsapp-link').forEach(link => {
@@ -301,6 +307,15 @@ if (productDetailPage) {
   document.querySelector('meta[name="description"]').content = product.description;
   document.querySelector('meta[property="og:title"]').content = document.title;
   document.querySelector('meta[property="og:description"]').content = product.description;
+  const canonical = 'https://flamingosandalye.com/urun-detay.html?model=' + encodeURIComponent(slug);
+  document.querySelector('link[rel="canonical"]').href = canonical;
+  document.querySelector('meta[property="og:url"]').content = canonical;
+  for (const selector of ['meta[property="og:image"]', 'meta[name="twitter:image"]']) {
+    document.querySelector(selector).content = 'https://flamingosandalye.com/' + gallery.original;
+  }
+  document.querySelector('meta[property="og:image:alt"]').content = product.title + ' ahşap sandalye';
+  document.querySelector('meta[name="twitter:title"]').content = document.title;
+  document.querySelector('meta[name="twitter:description"]').content = product.description;
   document.getElementById('detailTitle').textContent = product.title;
   document.getElementById('detailBreadcrumb').textContent = product.title;
   document.getElementById('detailDescription').textContent = product.description;
@@ -471,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { once:true });
 
   button.addEventListener('click', async () => {
-    if (!videoAvailable || video.readyState === 0) {
+    if (!videoAvailable) {
       document.querySelector('.production-process')?.scrollIntoView({ behavior:'smooth', block:'start' });
       return;
     }
@@ -484,6 +499,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Autoplay engellenirse poster görünür ve butondan başlatılabilir.
-  video.play().catch(() => syncButton());
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (window.matchMedia('(min-width: 981px)').matches && !prefersReducedMotion.matches && !navigator.connection?.saveData) {
+    video.play().catch(() => syncButton());
+  }
   syncButton();
 });

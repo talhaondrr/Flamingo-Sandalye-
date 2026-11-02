@@ -1,4 +1,6 @@
 /* Homepage: warm wood, quiet typography, and a connected production timeline. */
+/* The poster remains visible before video playback on mobile and tablets. */
+.production-media{background:#201913 url('../images/uretim-poster.webp') center/cover no-repeat;}
 .production-hero{isolation:isolate;background:#201913;}
 .production-hero-wrap{min-height:690px;padding-top:68px;padding-bottom:64px;}
 .production-media video{filter:saturate(.82) contrast(1.04);}

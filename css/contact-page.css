@@ -61,3 +61,10 @@
   .contact-info-card dd { font-size: .76rem; }
 }
 @media (max-width: 350px) { .contact-info-grid { grid-template-columns: 1fr; } }
+/* Keep the opening-hours columns readable on narrow phones. */
+@media (min-width: 351px) and (max-width: 600px) {
+  .contact-info-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 940px) {
+  .contact-page .field input, .contact-page .field select, .contact-page .field textarea { font-size: 16px; }
+}

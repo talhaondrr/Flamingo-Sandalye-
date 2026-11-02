@@ -64,7 +64,7 @@ function run(search, withForm = false) {
   const nodes = Object.fromEntries(['productDetailPage', 'detailTitle', 'detailBreadcrumb', 'detailDescription', 'detailMainImage', 'detailBackHeight', 'detailDepth', 'detailSeatHeight', 'detailFabricMeters', 'detailWhatsApp', 'featuredTrack'].map(id => [id, element()]));
   const wrap = element();
   nodes.productDetailPage.querySelector = () => wrap;
-  const metas = Object.fromEntries(['description', 'og:title', 'og:description'].map(key => [key, element()]));
+  const metas = Object.fromEntries(['description', 'og:title', 'og:description', 'canonical', 'og:url', 'og:image', 'og:image:alt', 'twitter:image', 'twitter:title', 'twitter:description'].map(key => [key, element()]));
   const callbacks = [];
   const opened = [];
   const head = element();
@@ -96,7 +96,7 @@ for (const [slug, product] of Object.entries(products)) {
   check(result.nodes.detailTitle.textContent === product.title, `${slug}: title`);
   check(result.nodes.detailMainImage.src === galleries[slug].original, `${slug}: image mapping`);
   check(result.metas.description.content === product.description, `${slug}: SEO description`);
-  check(result.nodes.detailWhatsApp.href.startsWith('https://wa.me/905010951913?text='), `${slug}: WhatsApp`);
+  check(result.nodes.detailWhatsApp.href.startsWith('https://wa.me/905010421616?text='), `${slug}: WhatsApp`);
   inspectReference(galleries[slug].original, resolve(dist, 'urun-detay.html'));
   urls.add('/urun-detay.html?model=' + slug);
 }

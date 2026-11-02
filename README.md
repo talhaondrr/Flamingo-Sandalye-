@@ -18,7 +18,7 @@ Bu sürümde ana sayfa, markayı ve ürün akışını tek bir modern sayfada to
 - Ürün galerileri
 - Ahşap rengi + kumaş seçimi
 - Adet seçimi
-- Seçimleri `0501 095 19 13` numarasına WhatsApp mesajı olarak gönderme
+- Seçimleri `0501 042 16 16` numarasına WhatsApp mesajı olarak gönderme
 
 > Ahşap ve kumaş seçenekleri şimdilik temsilidir. Gerçek kartela görselleri hazır olduğunda mevcut seçim alanına eklenebilir.
 

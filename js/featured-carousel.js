@@ -1,15 +1,16 @@
-(() => {
+function initFeaturedCarousel() {
   const track = document.getElementById('featuredTrack');
   if (!track) return;
   const carousel = track.closest('.featured-carousel');
   const previous = carousel.querySelector('.featured-prev');
   const next = carousel.querySelector('.featured-next');
   const cards = [...track.querySelectorAll('.featured-card')];
+  if (!previous || !next || !cards.length) return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let targetIndex = 0;
   let scrollFrame = 0;
-  const step = () => cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap);
-  const lastIndex = () => Math.max(0, cards.length - Math.round((track.clientWidth + parseFloat(getComputedStyle(track).gap)) / step()));
+  const step = () => cards[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
+  const lastIndex = () => Math.max(0, Math.ceil((track.scrollWidth - track.clientWidth) / step()));
   const update = () => {
     previous.disabled = track.scrollLeft < 2;
     next.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 2;
@@ -39,4 +40,10 @@
     update();
   }).observe(track);
   update();
-})();
+}
+
+if (document.readyState !== 'complete') {
+  document.addEventListener('DOMContentLoaded', initFeaturedCarousel, { once: true });
+} else {
+  initFeaturedCarousel();
+}

@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Flamingo: Vite başlat",
+            "type": "process",
+            "command": "node",
+            "args": ["${workspaceFolder}/node_modules/vite/bin/vite.js", "--host", "127.0.0.1", "--port", "5173", "--strictPort"],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": { "NO_COLOR": "1" }
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "vite",
+                "pattern": { "regexp": "^$" },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*VITE.*",
+                    "endsPattern": ".*Local:.*http://127\\.0\\.0\\.1:5173/.*"
+                }
+            },
+            "presentation": { "reveal": "silent", "panel": "dedicated" },
+            "runOptions": { "instanceLimit": 1 }
+        }
+    ]
+}

@@ -37,7 +37,7 @@ export default defineConfig({
       for (const directory of ['css', 'images/catalog']) {
         cpSync(resolve(import.meta.dirname, directory), resolve(import.meta.dirname, 'dist', directory), { recursive: true });
       }
-      for (const file of ['images/flamingo-transparent.png', 'images/uretim-poster.webp', 'media/flamingo-katalog.pdf']) {
+      for (const file of ['images/flamingo-transparent.png', 'images/uretim-poster.webp', 'media/flamingo-katalog.pdf', 'js/featured-carousel.js', 'js/script.js', 'js/detail-photo.js']) {
         const destination = resolve(import.meta.dirname, 'dist', file);
         mkdirSync(resolve(destination, '..'), { recursive: true });
         cpSync(resolve(import.meta.dirname, file), destination);
